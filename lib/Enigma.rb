@@ -7,4 +7,8 @@ class Enigma
   def random_key
     key_generator
   end
+
+  def current_date
+    default_date
+  end
 end
