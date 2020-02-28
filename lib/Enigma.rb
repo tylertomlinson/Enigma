@@ -1,2 +1,10 @@
+require_relative 'generator'
+
 class Enigma
-end 
+  include Generator
+  extend Generator
+
+  def random_key
+    key_generator
+  end
+end
