@@ -21,6 +21,7 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_can_encrypt_message_with_all_arguments_being_passed
+    skip
     expected = {
                   encryption: "keder ohulw",
                   key: "02715",
@@ -31,6 +32,7 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_can_encrypt_message_with_only_message_and_key_being_passed
+    skip
     expected = {
                   encryption: "keder ohulw",
                   key: "02715",
@@ -41,6 +43,7 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_can_encrypt_message_with_only_message_and_date_being_passed
+    skip
     expected = {
                   encryption: "keder ohulw",
                   key: "02715",
@@ -51,6 +54,7 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_can_encrypt_message_with_only_message_being_passed
+    skip
     expected = {
                   encryption: "keder ohulw",
                   key: "02715",
