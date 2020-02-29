@@ -6,13 +6,30 @@ class EnigmaTest < Minitest::Test
 
   def setup
     @enigma = Enigma.new
-    # @encrypted = @enigma.encrypt("hello world", "02715")
-    # @enigma.decrypt(@encrypted[:encryption], "02715")
   end
 
   def test_it_exists
     assert_instance_of Enigma, @enigma
   end
+
+  def test_can_generate_5_random_numbers
+    @enigma.stubs(:key_generator).returns([4,5,2,3,6])
+
+    assert_equal [4,5,2,3,6], @enigma.random_key
+  end
+
+  def test_can_generate_current_date
+    Date.stubs(:today).returns(Date.new(2020,2,27))
+
+    assert_equal 200227, @enigma.default_date
+  end
+
+  def test_can_format_date_for_offset
+    Date.stubs(:today).returns(Date.new(2020,2,27))
+
+    assert_equal ["1", "5", "2", "9"], @enigma.date_offset
+  end
+
 
   def test_encrypt_and_decrypt_returns_as_hash
     skip
