@@ -13,7 +13,4 @@ class Enigma
     offset_format *= offset_format
     offset_format.to_s[-4, 4].chars
   end
-
-
-
 end
