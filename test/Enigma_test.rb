@@ -21,7 +21,14 @@ class EnigmaTest < Minitest::Test
   def test_can_generate_current_date
     Date.stubs(:today).returns(Date.new(2020,2,27))
 
-    assert_equal "200227", @engima.default_date
+    assert_equal 200227, @enigma.default_date
+  end
+
+  def test_can_format_date_for_offset
+    Date.stubs(:today).returns(Date.new(2020,2,27))
+
+    assert_equal ["1", "5", "2", "9"], @enigma.date_offset
+  end
 
 
   def test_encrypt_and_decrypt_returns_as_hash
