@@ -8,7 +8,8 @@ class Enigma
     key_generator
   end
 
-  def current_date
-    default_date
-  end
+  default_date
+
+
+
 end
