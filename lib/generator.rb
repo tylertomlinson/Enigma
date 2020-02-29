@@ -7,6 +7,7 @@ module Generator
   end
 
   def default_date
-    Date.today.strftime("%y%m%d")
+    Date.today.strftime("%y%m%d").to_i
   end
+
 end
