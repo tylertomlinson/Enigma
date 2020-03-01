@@ -17,26 +17,24 @@ class OffsetTest < Minitest::Test
     assert_equal "040895", @offset.date
   end
 
-  #need to test
-  #if it has date (from user)
-  #can get default_date
-  #can convert users date
-  #can convert default_date
-  #build hash like keys
-
-  def test_can_format_generated_date_for_offset
-    Date.stubs(:today).returns(Date.new(2020,2,27))
-
-    offset2 = Offset.new(default_date)
-    #this needs to be testing for user input as well
-
-
-    assert_equal ["1", "5", "2", "9"], offset2.convert_date
-  end
-
   def test_can_generate_current_date
     Date.stubs(:today).returns(Date.new(2020,2,27))
 
     assert_equal 200227, @offset.default_date
   end
+
+  def test_can_format_user_inputed_date_for_offset
+    assert_equal ["1", "0", "2", "5"], @offset.convert_date
+  end
+
+  def test_can_format_generated_date_for_offset
+    Date.stubs(:today).returns(Date.new(2020,2,27))
+
+    offset2 = Offset.new(default_date)
+
+    assert_equal ["1", "5", "2", "9"], offset2.convert_date
+  end
+
+  #need to test
+  #build hash like keys
 end

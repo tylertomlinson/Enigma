@@ -11,9 +11,6 @@ class Offset
   end
 
   def convert_date
-    squared_date = @date.to_i
-    (squared_date *= squared_date).to_s[-4, 4].chars
+    (@date.to_i ** 2).to_s[-4, 4].chars
   end
-
-
 end
