@@ -2,8 +2,8 @@ require 'date'
 
 module Generator
 
-  def key_generator
-    (0..9).to_a.sample(5)
+  def number_generator
+    rand(0..99999).to_s.rjust(5, "0")
   end
 
   def default_date

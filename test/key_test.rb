@@ -13,8 +13,8 @@ class KeyTest < Minitest::Test
   end
 
   def test_can_generate_5_random_numbers
-    @key.stubs(:number_generator).returns([4,5,2,3,6])
+    @key.stubs(:rand).returns("3847")
 
-    assert_equal [4,5,2,3,6], @enigma.random_keys
+    assert_equal "03847", @key.number_generator
   end
 end
