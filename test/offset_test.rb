@@ -19,12 +19,12 @@ class OffsetTest < Minitest::Test
   def test_can_format_date_for_offset
     Date.stubs(:today).returns(Date.new(2020,2,27))
 
-    assert_equal ["1", "5", "2", "9"], @enigma.date_offset
+    assert_equal ["1", "5", "2", "9"], @offset.convert_date
   end
 
   def test_can_generate_current_date
     Date.stubs(:today).returns(Date.new(2020,2,27))
 
-    assert_equal 200227, @enigma.default_date
+    assert_equal 200227, @offset.default_date
   end
 end
