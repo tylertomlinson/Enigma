@@ -37,20 +37,21 @@ class EnigmaTest < Minitest::Test
 
   def test_can_encrypt_message_with_all_arguments_being_passed
     skip
-    assert_equal expected, @enigma.encrypt("hello world", "02715", "040895")
+    assert_equal @expected, @enigma.encrypt("hello world", "02715", "040895")
   end
 
   def test_can_encrypt_message_with_only_message_and_key_being_passed
-    assert_equal expected, @enigma.encrypt("hello world", "02715")
+    skip
+    assert_equal @expected, @enigma.encrypt("hello world", "02715")
   end
 
   def test_can_encrypt_message_with_only_message_and_date_being_passed
     skip
-    assert_equal expected, @enigma.encrypt("hello world", "040895")
+    assert_equal @expected, @enigma.encrypt("hello world", "040895")
   end
 
   def test_can_encrypt_message_with_only_message_being_passed
     skip
-    assert_equal expected, @enigma.encrypt("hello world")
+    assert_equal @expected, @enigma.encrypt("hello world")
   end
 end
