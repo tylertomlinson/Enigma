@@ -1,15 +1,13 @@
 require_relative 'generator'
 
 class Offset
-  include Generator
-  extend Generator
+  include  Generator
 
   attr_reader :date
 
   def initialize(date = default_date)
     @date = date
     @offset = date_offset_hash
-    require "pry"; binding.pry
   end
 
   def convert_date
