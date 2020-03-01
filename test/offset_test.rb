@@ -3,6 +3,7 @@ require './lib/generator'
 require './lib/offset'
 
 class OffsetTest < Minitest::Test
+  include Generator
 
   def setup
     @offset = Offset.new("040895")
@@ -23,15 +24,14 @@ class OffsetTest < Minitest::Test
   #can convert default_date
   #build hash like keys
 
-
   def test_can_format_generated_date_for_offset
+    Date.stubs(:today).returns(Date.new(2020,2,27))
+
+    offset2 = Offset.new(default_date)
     #this needs to be testing for user input as well
-    offset1 = Offset.new()
-  Date.stubs(:today).returns(Date.new(2020,2,27))
 
-    offset1.stubs(:default_date).returns(2020227)
 
-    assert_equal ["1", "5", "2", "9"], offset1.convert_date
+    assert_equal ["1", "5", "2", "9"], offset2.convert_date
   end
 
   def test_can_generate_current_date
