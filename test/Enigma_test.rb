@@ -12,12 +12,6 @@ class EnigmaTest < Minitest::Test
     assert_instance_of Enigma, @enigma
   end
 
-  def test_can_generate_5_random_numbers
-    @enigma.stubs(:key_generator).returns([4,5,2,3,6])
-
-    assert_equal [4,5,2,3,6], @enigma.random_key
-  end
-
   def test_can_generate_current_date
     Date.stubs(:today).returns(Date.new(2020,2,27))
 
@@ -29,7 +23,6 @@ class EnigmaTest < Minitest::Test
 
     assert_equal ["1", "5", "2", "9"], @enigma.date_offset
   end
-
 
   def test_encrypt_and_decrypt_returns_as_hash
     skip
