@@ -35,6 +35,9 @@ class OffsetTest < Minitest::Test
     assert_equal ["1", "5", "2", "9"], offset2.convert_date
   end
 
-  #need to test
-  #build hash like keys
+  def test_can_create_hash_with_offset_from_last_four
+    expected = {"A"=>1, "B"=>0, "C"=>2, "D"=>5}
+
+    assert_equal expected, @key.key_splitter
+  end
 end
