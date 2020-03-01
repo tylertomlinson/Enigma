@@ -38,6 +38,6 @@ class OffsetTest < Minitest::Test
   def test_can_create_hash_with_offset_from_last_four
     expected = {"A"=>1, "B"=>0, "C"=>2, "D"=>5}
 
-    assert_equal expected, @key.key_splitter
+    assert_equal expected, @offset.date_offset_hash
   end
 end
