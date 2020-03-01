@@ -1,20 +1,21 @@
-
+*** - functional
 Key
 
-The keys are created by generating a random five digit number, like 02715, and splitting it up like so:
+*** The keys are created by generating a random five digit number, like 02715, and splitting it up like so:
 
-A key: first two digits (02)
-B key: second and third digits (27)
-C key: third and fourth digits (71)
-D key: fourth and fifth digits (15)
+*** A key: first two digits (02)
+*** B key: second and third digits (27)
+*** C key: third and fourth digits (71)
+*** D key: fourth and fifth digits (15)
 
   New instance might contain a
-    1. Random number generator or numbers passed in as parameter
-    2. Hash or array of the A,B,C,D keys
+  ***  1. Random number generator or numbers passed in as parameter
+  ***  2. Hash or array of the A,B,C,D keys
 
   Methods
-    1. Something to take either generated or user numbers and created above 2
-    2. Padding user input with 0 if less than 5 numbers are given
+  ***  1. Something to take either generated or user numbers and created above 2
+  ***  2. Padding user input with 0 if less than 5 numbers are given
+              (solved within generator module)
 
 
 Offsets
@@ -30,12 +31,14 @@ B offset: The second digit (0)
 C offset: The third digit (2)
 D offset: The fourth digit (5)
 
-  Will take the current date and will square it
-  *=
-  to take last four
-  [-4, 4]
-  Will need to break up to use
-  .chars
+                    -----------------------------------------------------------
+                    |           Will take the current date and will square it
+                    |           *=
+  Functional via module         to take last four
+                    |           [-4, 4]
+                    |            Will need to break up to use
+                    |          .chars
+                    -----------------------------------------------------------
 
   Can possibly iterate over this array to place each object on given offset
   next (seems plausible)

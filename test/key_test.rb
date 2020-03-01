@@ -17,7 +17,7 @@ class KeyTest < Minitest::Test
     assert_equal "02715", @key.key
 
     key1 = Key.new
-  #testing number_generator acts as expected
+    #testing number_generator acts as expected
     assert_equal 5, key1.key.length
     assert_instance_of String, key1.key
   end
