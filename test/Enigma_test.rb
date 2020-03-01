@@ -24,7 +24,6 @@ class EnigmaTest < Minitest::Test
     assert_equal ["1", "5", "2", "9"], @enigma.date_offset
   end
 
-
   def test_encrypt_and_decrypt_returns_as_hash
     skip
     assert_instance_of Hash, @engima.encrypt
