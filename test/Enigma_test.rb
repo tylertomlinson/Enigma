@@ -6,22 +6,15 @@ class EnigmaTest < Minitest::Test
 
   def setup
     @enigma = Enigma.new
+    @expected = {
+              encryption: "keder ohulw",
+              key: "02715",
+              date: "040895"
+            }
   end
 
   def test_it_exists
     assert_instance_of Enigma, @enigma
-  end
-
-  def test_can_generate_current_date
-    Date.stubs(:today).returns(Date.new(2020,2,27))
-
-    assert_equal 200227, @enigma.default_date
-  end
-
-  def test_can_format_date_for_offset
-    Date.stubs(:today).returns(Date.new(2020,2,27))
-
-    assert_equal ["1", "5", "2", "9"], @enigma.date_offset
   end
 
   def test_encrypt_and_decrypt_returns_as_hash
@@ -32,45 +25,21 @@ class EnigmaTest < Minitest::Test
 
   def test_can_encrypt_message_with_all_arguments_being_passed
     skip
-    expected = {
-                  encryption: "keder ohulw",
-                  key: "02715",
-                  date: "040895"
-                }
-
-    assert_equal expected, @enigma.encrypt("hello world", "02715", "040895")
+    assert_equal @expected, @enigma.encrypt("hello world", "02715", "040895")
   end
 
   def test_can_encrypt_message_with_only_message_and_key_being_passed
     skip
-    expected = {
-                  encryption: "keder ohulw",
-                  key: "02715",
-                  date: "040895"
-                }
-
-    assert_equal expected, @enigma.encrypt("hello world", "02715")
+    assert_equal @expected, @enigma.encrypt("hello world", "02715")
   end
 
   def test_can_encrypt_message_with_only_message_and_date_being_passed
     skip
-    expected = {
-                  encryption: "keder ohulw",
-                  key: "02715",
-                  date: "040895"
-                }
-
-    assert_equal expected, @enigma.encrypt("hello world", "040895")
+    assert_equal @expected, @enigma.encrypt("hello world", "040895")
   end
 
   def test_can_encrypt_message_with_only_message_being_passed
     skip
-    expected = {
-                  encryption: "keder ohulw",
-                  key: "02715",
-                  date: "040895"
-                }
-
-    assert_equal expected, @enigma.encrypt("hello world")
+    assert_equal @expected, @enigma.encrypt("hello world")
   end
 end

@@ -44,6 +44,9 @@ D offset: The fourth digit (5)
   next (seems plausible)
   need to figure out how to give each object a so called variable name (A_offset, b_offset, etc)
 
+Want to convert date within this class and not Enigma
+Also probably change that method name
+
 
 Shifter
 
