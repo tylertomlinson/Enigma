@@ -7,19 +7,18 @@ class Offset
 
   def initialize(date = default_date)
     @date = date
-    @offset = date_offset_hash
   end
 
   def convert_date
     (@date.to_i ** 2).to_s[-4, 4].chars
   end
 
-  def date_offset_hash
-    offset_hash = {}
-    offset_hash["A"] = convert_date[0].to_i
-    offset_hash["B"] = convert_date[1].to_i
-    offset_hash["C"] = convert_date[2].to_i
-    offset_hash["D"] = convert_date[3].to_i
-    offset_hash
+  def offset_hash
+    date_offset_hash = {}
+    date_offset_hash["A"] = convert_date[0].to_i
+    date_offset_hash["B"] = convert_date[1].to_i
+    date_offset_hash["C"] = convert_date[2].to_i
+    date_offset_hash["D"] = convert_date[3].to_i
+    date_offset_hash
   end
 end
