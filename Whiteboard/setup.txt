@@ -55,11 +55,13 @@ Shifter
       ("a".."z").to_a << " "
 
 
-  Will need to shift the keys and date offset then will take the the
-   keys with the date offset and merge together
+***  Will need to shift the keys and date offset then will take the the
+***   keys with the date offset and merge together
 
-    It is the sum of key + offset
-        A key + B key
+***    It is the sum of key + offset
+***        A key + B key
 
-  encrypt will shift forward
-  decrypt will shift backward
+  encrypt will shift forward - working on
+  decrypt will shift backward - working on
+
+  Translate using lowercase letters.
