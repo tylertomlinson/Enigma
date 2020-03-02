@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  Replicating the infamous World War 2 Enigma Machine in raw ruby by using CLI to convert strings to and from various encodings.
+  Replicating the infamous World War 2 Enigma Machine in raw ruby by using CLI to convert strings to and from various encodings. https://en.wikipedia.org/wiki/Enigma_machine
 </p>
 
 ## Objective 
