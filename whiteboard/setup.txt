@@ -1,52 +1,12 @@
-*** - functional
-Key
+Enigma setup
 
-*** The keys are created by generating a random five digit number, like 02715, and splitting it up like so:
-
-*** A key: first two digits (02)
-*** B key: second and third digits (27)
-*** C key: third and fourth digits (71)
-*** D key: fourth and fifth digits (15)
-
-  New instance might contain a
-  ***  1. Random number generator or numbers passed in as parameter
-  ***  2. Hash or array of the A,B,C,D keys
-
-  Methods
-  ***  1. Something to take either generated or user numbers and created above 2
-  ***  2. Padding user input with 0 if less than 5 numbers are given
-              (solved within generator module)
+  build out encrypt and decrypt to pass in arguments and hash to build from
 
 
-Offsets
 
-*** The offsets are found using the date of transmission.
 
-****Date formatted like DDMMYY. August 4, 1995 represented as 040895.
 
-   Want to ask for clarity on this. Pretty confusing
 
-*** Square the numeric form (1672401025)
-*** Take the last four digits (1025)
-*** A offset: The first digit (1)
-*** B offset: The second digit (0)
-*** C offset: The third digit (2)
-*** D offset: The fourth digit (5)
-
-                    -----------------------------------------------------------
-                    |           Will take the current date and will square it
-                    |           *=
-  Functional via module         to take last four
-                    |           [-4, 4]
-                    |            Will need to break up to use
-                    |          .chars
-                    -----------------------------------------------------------
-  Can possibly iterate over this array to place each object on given offset
-  next (seems plausible)
-  need to figure out how to give each object a so called variable name (A_offset, b_offset, etc)
-
-*** Want to convert date within this class and not Enigma
-*** Also probably change that method name
 
 Shifter
 
@@ -60,6 +20,9 @@ Shifter
 ***    It is the sum of key + offset
 ***        A key + B key
 
+
+
+Need to rotate now
   encrypt will shift forward - working on
   decrypt will shift backward - working on
 
