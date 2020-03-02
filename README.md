@@ -35,7 +35,7 @@ Created 'decrypted.txt' with the key 82648 and date 240818
 - Create a new Pull Request
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
 
 ## Acknowledgments
 
