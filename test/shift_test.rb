@@ -7,7 +7,9 @@ require './lib/shift'
 class ShiftTest < Minitest::Test
 
   def setup
-    @shift = Shift.new
+    @key = Key.new("02715")
+    @offset = Offset.new("040895")
+    @shift = Shift.new(@key, @offset)
   end
 
   def test_it_exists
@@ -15,6 +17,7 @@ class ShiftTest < Minitest::Test
   end
 
   def test_attributes
-    skip
+    assert_instance_of Key, @key
+    assert_instance_of Offset, @offset
   end
 end
