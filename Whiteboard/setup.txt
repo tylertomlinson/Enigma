@@ -48,7 +48,6 @@ Offsets
 *** Want to convert date within this class and not Enigma
 *** Also probably change that method name
 
-
 Shifter
 
   Initializes with alphabet:
