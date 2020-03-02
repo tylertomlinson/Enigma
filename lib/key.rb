@@ -7,7 +7,6 @@ class Key
 
   def initialize(key = number_generator )
     @key = key
-    @key_hash = key_splitter
   end
 
   def key_splitter
