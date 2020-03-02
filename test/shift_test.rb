@@ -22,6 +22,7 @@ class ShiftTest < Minitest::Test
   end
 
   def test_shifter
+    expected = {"A"=>3, "B"=>27, "C"=>73, "D"=>20}
     assert_equal expected, @shift.shifter
   end
 end
