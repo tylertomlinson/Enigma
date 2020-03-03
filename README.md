@@ -44,3 +44,18 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) f
 
 * Turing Mod1 Instructors FTW
 * Inspiration
+
+______________________________________________________________________________________________________________________________
+
+ ## [Enigma](https://backend.turing.io/module1/projects/) solo project Mod1
+
+### Functionality: 3
+> Encrypt and decrypt both working. CLI for encrypt.rb and decrypt.rb implemented correctly. 
+### Object Oriented Programming: 4
+> Implemented a module to incorporate DRY into my code. The module is generating numbers, dates, and characters. I didn't see a great use case for inheritance on this project.
+### Ruby Conventions and Mechanics: 4
+> Classes, methods, and variables are named clearly and are very readable when strung together. Code is formatted accordingly (Ruby style guide). All enumerables are the most efficient tool within given logic.
+### Test Driven Development: 4
+> Every method is tested, including edge cases. Using stubs several times within different test across files to be independent of other classes. SimpleCov covering 100% . 28 runs, 42 assertions via Rakefile.
+### Version Control: 4
+> 90+ commits that explain the functionality of each. All commits are used for a reason and arent just thrown around. Pull requests explain in detail was was done logically as well as the functionallity added. Breakdown of methods and test within each PR. 
