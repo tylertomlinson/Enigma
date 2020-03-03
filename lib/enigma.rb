@@ -1,4 +1,8 @@
+require_relative 'shift'
+require_relative 'generator'
+
 class Enigma
+  include Generator
 
   def encrypt(message, key = number_generator, date = default_date )
     shift = Shift.new(key, date)
