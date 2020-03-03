@@ -47,7 +47,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) f
 
 ______________________________________________________________________________________________________________________________
 
- ## [Enigma](https://backend.turing.io/module1/projects/) solo project Mod1
+ ## [Enigma](https://backend.turing.io/module1/projects/enigma) solo project Mod1
 
 ### Functionality: 3
 > Encrypt and decrypt both working. CLI for encrypt.rb and decrypt.rb implemented correctly. 
