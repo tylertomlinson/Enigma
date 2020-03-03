@@ -1,6 +1,4 @@
 require_relative 'test_helper'
-require './lib/generator'
-require './lib/key'
 
 class KeyTest < Minitest::Test
   include Generator

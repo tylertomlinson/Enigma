@@ -1,5 +1,3 @@
-require 'date'
-
 module Generator
 
   def character_set

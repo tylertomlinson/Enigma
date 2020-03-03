@@ -1,8 +1,4 @@
-require_relative 'generator'
-
 class Offset
-  include  Generator
-
   attr_reader :date
 
   def initialize(date = default_date)

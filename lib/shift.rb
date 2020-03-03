@@ -1,7 +1,4 @@
-require_relative 'generator'
-
 class Shift
-  include Generator
 
   def initialize(key, offset)
     @key = key

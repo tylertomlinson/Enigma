@@ -1,6 +1,4 @@
 require_relative 'test_helper'
-require 'date'
-require './lib/enigma'
 
 class EnigmaTest < Minitest::Test
 

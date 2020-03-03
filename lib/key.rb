@@ -1,7 +1,4 @@
-require_relative 'generator'
-
 class Key
-  include Generator
   attr_reader :key
 
   def initialize(key = number_generator )
