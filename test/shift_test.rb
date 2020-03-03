@@ -24,7 +24,8 @@ class ShiftTest < Minitest::Test
 
   def test_can_find_letter_index_for_each_letter
     assert_equal 7, @shift.letter_index("h")
-    assert_equal 10, @shift.letter_index("r")
+    assert_equal 17, @shift.letter_index("r")
+    refute_equal 12, @shift.letter_index("A")
   end
 
   def test_can_shift_characters_forward
