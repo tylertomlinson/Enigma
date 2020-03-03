@@ -5,8 +5,16 @@
 </p>
 
 <p align="center">
+<a href="LICENSE"><img alt="Software License" src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square"></a>
+  <a href="https://codeclimate.com/github/tylertomlinson/Enigma/maintainability"><img src="https://api.codeclimate.com/v1/badges/8202f4f70c28f421c71d/maintainability" /></a>
+</p>
+
+<p align="center">
   Replicating the infamous World War 2 Enigma Machine in raw ruby by using CLI to convert strings to and from various encodings. https://en.wikipedia.org/wiki/Enigma_machine
 </p>
+
+
+
 
 ## Objective 
 Implement the cipher algorithm to encrypt and decrypt messages.
