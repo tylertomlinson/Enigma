@@ -16,7 +16,7 @@ class EnigmaTest < Minitest::Test
     assert_instance_of Hash, @enigma.decrypt("keder ohulw", "02715", "040895")
   end
 
-  def test_can_encrypt
+  def test_can_encrypt_with_all_three_arguments_being_passed
     expected = {
           encryption: "keder ohulw",
           key: "02715",
@@ -25,7 +25,7 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, @enigma.encrypt("hello world", "02715", "040895")
   end
 
-  def test_can_encrypt_message_with_only_message_and_key_being_passed
+  def test_can_encrypt_with_only_message_and_key_being_passed
     expected = {
       encryption: "kgbdrbmgunu",
       key: "02715",
@@ -34,7 +34,7 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, @enigma.encrypt("hello world", "02715")
   end
 
-  def test_can_encrypt_message_with_only_message_and_date_being_passed
+  def test_can_encrypt_with_only_message_and_date_being_passed
     @enigma.stubs(:rand).returns("05857")
 
     expected = {
@@ -46,7 +46,7 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, @enigma.encrypt("hello world", @enigma.number_generator, "040895")
   end
 
-  def test_can_encrypt_message_with_only_message_being_passed
+  def test_can_encrypt_with_only_message_being_passed
     @enigma.stubs(:rand).returns("05857")
 
     expected = {
@@ -58,7 +58,7 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, @enigma.encrypt("hello world", @enigma.number_generator, default_date )
   end
 
-  def test_can_decrypt
+  def test_can_decrypt_with_all_three_arguments_being_passed
     expected = {
       decryption: "hello world",
       key: "02715",
@@ -67,7 +67,7 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, @enigma.decrypt("keder ohulw", "02715", "040895")
   end
 
-  def test_can_decrypt_message_with_only_message_and_key_being_passed
+  def test_can_decrypt_with_only_message_and_key_being_passed
     expected = {
       decryption: "ecvtlyfwojn",
       key: "02715",
@@ -76,7 +76,7 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, @enigma.decrypt("hello world", "02715")
   end
 
-  def test_can_decrypt_message_with_only_message_and_date_being_passed
+  def test_can_decrypt_with_only_message_and_date_being_passed
     @enigma.stubs(:rand).returns("05857")
 
     expected = {
@@ -88,7 +88,7 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, @enigma.decrypt("hello world", @enigma.number_generator, "040895")
   end
 
-  def test_can_decrypt_message_with_only_message_being_passed
+  def test_can_decrypt_with_only_message_being_passed
     @enigma.stubs(:rand).returns("05857")
 
     expected = {
