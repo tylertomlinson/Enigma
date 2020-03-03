@@ -12,7 +12,7 @@ class ShiftTest < Minitest::Test
     assert_instance_of Shift, @shift
   end
 
-  def test_attributes
+  def test_attribute
     assert_instance_of String, @key
     assert_instance_of String, @offset
   end
