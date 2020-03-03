@@ -27,7 +27,7 @@ class EnigmaTest < Minitest::Test
 
   def test_can_encrypt_with_only_message_and_key_being_passed
     expected = {
-      encryption: "kgbdrbmgunu",
+      encryption: "kmbirhmlutu",
       key: "02715",
       date: default_date
     }
@@ -50,7 +50,7 @@ class EnigmaTest < Minitest::Test
     @enigma.stubs(:rand).returns("05857")
 
     expected = {
-      encryption: "nkpsuf vxrh",
+      encryption: "nqpxul  xxh",
       key: "05857",
       date: default_date
     }
@@ -69,7 +69,7 @@ class EnigmaTest < Minitest::Test
 
   def test_can_decrypt_with_only_message_and_key_being_passed
     expected = {
-      decryption: "ecvtlyfwojn",
+      decryption: "exvolsfrodn",
       key: "02715",
       date: default_date
     }
@@ -92,7 +92,7 @@ class EnigmaTest < Minitest::Test
     @enigma.stubs(:rand).returns("05857")
 
     expected = {
-      decryption: "bzheiushlf ",
+      decryption: "bth ioscl  ",
       key: "05857",
       date: default_date
     }
