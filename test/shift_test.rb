@@ -28,6 +28,14 @@ class ShiftTest < Minitest::Test
     refute_equal 12, @shift.letter_index("A")
   end
 
+  def test_can_find_letter_offset_value_for_each_letter
+    assert_equal 73, @shift.letter_offset_value(10)
+    assert_equal 27, @shift.letter_offset_value(17)
+    refute_equal 12, @shift.letter_offset_value(7)
+  end
+
+
+
   def test_can_shift_characters_forward
     skip
     assert_equal "keder ohulw", @shift.encryptor("Hello World")

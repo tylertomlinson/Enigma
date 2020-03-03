@@ -11,7 +11,12 @@ class Shift
 
   def letter_index(letter)
     character_set.find_index(letter)
-  end 
+  end
+
+  def letter_offset_value(index)
+    shifter.values[index % shifter.length]
+  end
+
 
 
 end
