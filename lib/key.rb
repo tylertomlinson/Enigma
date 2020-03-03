@@ -4,7 +4,7 @@ class Key
   def initialize(numbers = number_generator )
     @numbers = numbers
   end
-
+  
   def key_splitter
     key_hash = {}
     key_hash["A"] = @numbers.slice(0,2).to_i

@@ -1,6 +1,6 @@
 class Offset
   attr_reader :date
-
+  
   def initialize(date = default_date)
     @date = date
   end

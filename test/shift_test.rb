@@ -41,22 +41,10 @@ class ShiftTest < Minitest::Test
 
   def test_cypher_can_map_correctly_with_index
     assert_equal "keder ohulw", @shift.cypher("hello world", :+)
-    assert_equal "eetsl dvoll", @shift.cypher("hello world", :-)
-    assert_equal "keder euus", @shift.cypher("Hello mars", :+)
-    assert_equal "dowkkiooqmwvk", @shift.cypher("GoodNIGHTMOON", :-)
-  end
-
-  def test_can_shift_characters_forward
-    skip
-    assert_equal "keder ohulw", @shift.encryptor("Hello World")
-    assert_equal "keder euus", @shift.encryptor("Hello Mars")
-    assert_equal "jogxqizawmghq", @shift.encryptor("GoodNIGHTMOON")
-  end
-
-  def test_can_shift_characters_in_reverse
-    skip
-    assert_equal "hello world", @shift.decryptor("keder ohulw")
-    assert_equal "hello mars", @shift.decryptor("keder euus")
-    assert_equal "goodnightmoon", @shift.decryptor("jogxqizawmghq")
+    assert_equal "keder euus", @shift.cypher("Hello Mars", :+)
+    assert_equal "jogxqizawmghq", @shift.cypher("GoodNIGHTMOON", :+)
+    assert_equal "hello world", @shift.cypher("keder ohulw", :-)
+    assert_equal "hello mars", @shift.cypher("keder euus", :-)
+    assert_equal "goodnightmoon", @shift.cypher("jogxqizawmghq", :-)
   end
 end
