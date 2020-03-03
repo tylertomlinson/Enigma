@@ -13,8 +13,8 @@ class ShiftTest < Minitest::Test
   end
 
   def test_attributes
-    assert_instance_of Key, @key
-    assert_instance_of Offset, @offset
+    assert_instance_of String, @key
+    assert_instance_of String, @offset
   end
 
   def test_shifter
