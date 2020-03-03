@@ -13,14 +13,11 @@
   Replicating the infamous World War 2 Enigma Machine in raw ruby by using CLI to convert strings to and from various encodings. https://en.wikipedia.org/wiki/Enigma_machine
 </p>
 
-
-
-
-## Objective 
+## Objective
 Implement the cipher algorithm to encrypt and decrypt messages.
 
 ### Installation
- 
+
 1. Clone the repo
 ```sh
 git clone https://github.com/tylertomlinson/Enigma.git
@@ -32,8 +29,6 @@ Created 'encrypted.txt' with the key 82648 and date 240818
 $ ruby ./lib/decrypt.rb encrypted.txt decrypted.txt 82648 240818
 Created 'decrypted.txt' with the key 82648 and date 240818
 ```
-
-
 
 ## Contributing
 - Fork it (https://github.com/tylertomlinson/Enigma/fork)

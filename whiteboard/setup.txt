@@ -2,12 +2,6 @@ Enigma setup
 
   build out encrypt and decrypt to pass in arguments and hash to build from
 
-
-
-
-
-
-
 Shifter
 
   Initializes with alphabet:
@@ -21,7 +15,6 @@ Shifter
 ***        A key + B key
 
 
-
 Need to have message arg for encrypt now work with shifter
   encrypt will shift forward
   translate using lowercase letters. So everything will be down cased
@@ -32,12 +25,7 @@ Need to have message arg for encrypt now work with shifter
                              D - l
                 Loops back   A - o
 
-
-    
-
-
-
-
+  
 decrypt will shift backward - working on
 
 Translate using lowercase letters.
