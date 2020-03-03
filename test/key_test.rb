@@ -1,6 +1,4 @@
 require_relative 'test_helper'
-require './lib/generator'
-require './lib/key'
 
 class KeyTest < Minitest::Test
   include Generator
@@ -14,12 +12,12 @@ class KeyTest < Minitest::Test
   end
 
   def test_attributes
-    assert_equal "02715", @key.key
+    assert_equal "02715", @key.numbers
 
     key1 = Key.new
     #testing number_generator acts as expected
-    assert_equal 5, key1.key.length
-    assert_instance_of String, key1.key
+    assert_equal 5, key1.numbers.length
+    assert_instance_of String, key1.numbers
   end
 
   def test_can_generate_5_random_numbers

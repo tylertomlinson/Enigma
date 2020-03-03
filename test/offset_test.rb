@@ -1,6 +1,4 @@
 require_relative 'test_helper'
-require './lib/generator'
-require './lib/offset'
 
 class OffsetTest < Minitest::Test
   include Generator
@@ -20,7 +18,7 @@ class OffsetTest < Minitest::Test
   def test_can_generate_current_date
     Date.stubs(:today).returns(Date.new(2020,2,27))
 
-    assert_equal 200227, @offset.default_date
+    assert_equal "200227", @offset.default_date
   end
 
   def test_can_format_user_inputed_date_for_offset
