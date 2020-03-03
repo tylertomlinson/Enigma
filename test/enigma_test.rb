@@ -25,6 +25,39 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, @enigma.encrypt("hello world", "02715", "040895")
   end
 
+  def test_can_encrypt_message_with_only_message_and_key_being_passed
+    expected = {
+      encryption: "kgbdrbmgunu",
+      key: "02715",
+      date: default_date
+    }
+    assert_equal expected, @enigma.encrypt("hello world", "02715")
+  end
+
+  def test_can_encrypt_message_with_only_message_and_date_being_passed
+    @enigma.stubs(:rand).returns("05857")
+
+    expected = {
+      encryption: "nirtudbwxpj",
+      key:  "05857",
+      date: "040895"
+    }
+
+    assert_equal expected, @enigma.encrypt("hello world", @enigma.number_generator, "040895")
+  end
+
+  def test_can_encrypt_message_with_only_message_being_passed
+    @enigma.stubs(:rand).returns("05857")
+
+    expected = {
+      encryption: "nkpsuf vxrh",
+      key: "05857",
+      date: default_date
+    }
+
+    assert_equal expected, @enigma.encrypt("hello world", @enigma.number_generator, default_date )
+  end
+
   def test_can_decrypt
     expected = {
       decryption: "hello world",
@@ -32,20 +65,40 @@ class EnigmaTest < Minitest::Test
       date: "040895"
     }
     assert_equal expected, @enigma.decrypt("keder ohulw", "02715", "040895")
- end
-
-  def test_can_encrypt_message_with_only_message_and_key_being_passed
-    skip
-    assert_equal @expected, @enigma.encrypt("hello world", "02715")
   end
 
-  def test_can_encrypt_message_with_only_message_and_date_being_passed
-    skip
-    assert_equal @expected, @enigma.encrypt("hello world", "040895")
+  def test_can_decrypt_message_with_only_message_and_key_being_passed
+    expected = {
+      decryption: "ecvtlyfwojn",
+      key: "02715",
+      date: default_date
+    }
+    assert_equal expected, @enigma.decrypt("hello world", "02715")
   end
 
-  def test_can_encrypt_message_with_only_message_being_passed
-    skip
-    assert_equal @expected, @enigma.encrypt("hello world")
+  def test_can_decrypt_message_with_only_message_and_date_being_passed
+    @enigma.stubs(:rand).returns("05857")
+
+    expected = {
+      decryption: "bafdiwqglhy",
+      key:  "05857",
+      date: "040895"
+    }
+
+    assert_equal expected, @enigma.decrypt("hello world", @enigma.number_generator, "040895")
   end
+
+  def test_can_decrypt_message_with_only_message_being_passed
+    @enigma.stubs(:rand).returns("05857")
+
+    expected = {
+      decryption: "bzheiushlf ",
+      key: "05857",
+      date: default_date
+    }
+
+    assert_equal expected, @enigma.decrypt("hello world", @enigma.number_generator, default_date )
+  end
+
+
 end
