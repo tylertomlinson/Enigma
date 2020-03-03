@@ -11,7 +11,6 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_encrypt_and_decrypt_returns_as_hash
-
     assert_instance_of Hash, @enigma.encrypt("hello world", "02715", "040895")
     assert_instance_of Hash, @enigma.decrypt("keder ohulw", "02715", "040895")
   end
@@ -99,6 +98,4 @@ class EnigmaTest < Minitest::Test
 
     assert_equal expected, @enigma.decrypt("hello world", @enigma.number_generator, default_date )
   end
-
-
 end

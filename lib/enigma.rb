@@ -20,10 +20,5 @@ class Enigma
       key: key,
       date: date
     }
-
-    # def crack(output, date = default_date)
-  #   (Cracker.new(output, date)).cracker
-  #   #hash
-  # end
   end
 end
