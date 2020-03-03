@@ -47,4 +47,11 @@ class ShiftTest < Minitest::Test
     assert_equal "hello mars", @shift.cypher("keder euus", :-)
     assert_equal "goodnightmoon", @shift.cypher("jogxqizawmghq", :-)
   end
+
+  def test_character_set_has_all_letters_of_alphabet_formatted_correctly
+    expected = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+      "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "]
+
+    assert_equal expected, @shift.character_set
+  end
 end
