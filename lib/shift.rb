@@ -17,6 +17,10 @@ class Shift
     shifter.values[index % shifter.length]
   end
 
+  def shift_value(letter, index, operand)
+    letter_index(letter).send(operand, letter_offset_value(index))
+  end
+
 
 
 end

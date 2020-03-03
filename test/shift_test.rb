@@ -22,16 +22,21 @@ class ShiftTest < Minitest::Test
     assert_equal expected, @shift.shifter
   end
 
-  def test_can_find_letter_index_for_each_letter
+  def test_can_return_letter_index
     assert_equal 7, @shift.letter_index("h")
     assert_equal 17, @shift.letter_index("r")
     refute_equal 12, @shift.letter_index("A")
   end
 
-  def test_can_find_letter_offset_value_for_each_letter
+  def test_can_return_letter_offset_value
     assert_equal 73, @shift.letter_offset_value(10)
     assert_equal 27, @shift.letter_offset_value(17)
     refute_equal 12, @shift.letter_offset_value(7)
+  end
+
+  def test_can_return_shift_value
+    assert_equal 3, @shift.shift_value("a", 12, :+)
+    assert_equal (-10), @shift.shift_value("r", 17, :-)
   end
 
 
