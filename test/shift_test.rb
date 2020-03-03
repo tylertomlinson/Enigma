@@ -39,7 +39,12 @@ class ShiftTest < Minitest::Test
     assert_equal (-10), @shift.shift_value("r", 17, :-)
   end
 
-
+  def test_cypher_can_map_correctly_with_index
+    assert_equal "keder ohulw", @shift.cypher("hello world", :+)
+    assert_equal "eetsl dvoll", @shift.cypher("hello world", :-)
+    assert_equal "keder euus", @shift.cypher("Hello mars", :+)
+    assert_equal "dowkkiooqmwvk", @shift.cypher("GoodNIGHTMOON", :-)
+  end
 
   def test_can_shift_characters_forward
     skip

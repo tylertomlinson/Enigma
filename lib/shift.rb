@@ -21,6 +21,12 @@ class Shift
     letter_index(letter).send(operand, letter_offset_value(index))
   end
 
+  def cypher(message, operand)
+   message.downcase.chars.map.with_index do |letter, index|
+     character_set[shift_value(letter, index, operand) % character_set.length]
+   end.join
+  end
+
 
 
 end
